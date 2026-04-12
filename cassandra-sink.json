@@ -1,0 +1,16 @@
+{
+  "name": "cassandra-sales-sink",
+  "config": {
+    "connector.class": "com.datastax.oss.kafka.sink.CassandraSinkConnector",
+    "tasks.max": "1",
+    "topics": "sales-raw",
+    "contactPoints": "localhost",
+    "loadBalancing.localDc": "datacenter1",
+    "port": "9042",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+
+    "topic.sales-raw.sales.sales_raw.mapping": "order_id=value.order_id,customer_id=value.customer_id,product_id=value.product_id,product_name=value.product_name,category=value.category,quantity=value.quantity,price=value.price,city=value.city,country=value.country,latitude=value.latitude,longitude=value.longitude,first_name=value.first_name,last_name=value.last_name,email=value.email,timestamp=value.timestamp"
+  }
+}
