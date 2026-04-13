@@ -1,0 +1,17 @@
+{
+  "name": "customer-profile-sink",
+  "config": {
+    "connector.class": "com.datastax.oss.kafka.sink.CassandraSinkConnector",
+    "tasks.max": "1",
+    "topics": "customer-profile",
+    "contactPoints": "localhost",
+    "loadBalancing.localDc": "datacenter1",
+    "port": "9042",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+
+    "topic.customer-profile.sales.customer_profile.mapping": "customer_id=value.customer_id,email=value.email,first_name=value.first_name,last_name=value.last_name,country=value.country,city=value.city"
+  }
+}
+
