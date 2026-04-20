@@ -10,7 +10,7 @@
 
 
 
-#### Designing a Scalable Real-Time Data Pipeline with Kafka Streams, Kafka Connect & Cassandra
+## Designing a Scalable Real-Time Data Pipeline with Kafka Streams, Kafka Connect & Cassandra
 
 
 A real-time streaming pipeline that processes transaction events using Kafka Streams, aggregates data in 1-minute tumbling windows, and persists results into Apache Cassandra via Kafka Connect.
