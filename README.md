@@ -70,7 +70,7 @@ Start Producer
 
 ```sh
 # Run producer
-mvn exec:java -Dexec.mainClass=mart.App
+mvn exec:java -Dexec.mainClass=kmart.App
 ```
 
 **Run Kafka Streams Applications**
@@ -79,7 +79,7 @@ Start Kafka Streams Processor
 
 ```sh
 # In different tab
-mvn exec:java -Dexec.mainClass=mart.SalesProcessor
+mvn exec:java -Dexec.mainClass=kmart.SalesProcessor
 ```
 #### Verify Kafka Topics
 
@@ -93,7 +93,7 @@ kafka-topics.sh --list --bootstrap-server localhost:9095
 ### Kafka Connectors
 
 
-#### Deploy Connectors
+##### Deploy Connectors
 
 **Transaction records**
 
@@ -199,3 +199,8 @@ kafka-console-consumer.sh \
   }
 }
 ```
+
+
+#### Read on Medium
+
+[How I Built a Scalable Real-Time Analytics Pipeline with Kafka Streams, Kafka Connect & Cassandra.](https://medium.com/brilliant-programmer/how-i-built-a-scalable-real-time-analytics-pipeline-with-kafka-streams-kafka-connect-cassandra-c201e83a8851)
