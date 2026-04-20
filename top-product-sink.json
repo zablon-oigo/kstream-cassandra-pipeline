@@ -1,0 +1,16 @@
+{
+  "name": "top-product-sink",
+  "config": {
+    "connector.class": "com.datastax.oss.kafka.sink.CassandraSinkConnector",
+    "tasks.max": "1",
+    "topics": "top-product-1min-window",
+    "contactPoints": "localhost",
+    "loadBalancing.localDc": "datacenter1",
+    "port": "9042",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "topic.top-product-1min-window.sales.top_product_per_window.mapping": 
+      "window_start=key, product_name=value.product_name, quantity=value.quantity"
+  }
+}
