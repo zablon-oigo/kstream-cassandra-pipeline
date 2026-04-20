@@ -6,8 +6,10 @@ import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.Topology;
 
+import kmart.streams.CountryStream;
 import kmart.streams.CustomerStream;
 import kmart.streams.LocationStream;
+import kmart.streams.ProductStream;
 
 public class SalesProcessor {
 
@@ -22,7 +24,9 @@ public class SalesProcessor {
         // Build topology
         CustomerStream.build(builder);
         LocationStream.build(builder);
-
+        CountryStream.build(builder);
+        ProductStream.build(builder);
+        
         Topology topology = builder.build();
 
         System.out.println(topology.describe());
