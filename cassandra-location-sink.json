@@ -1,0 +1,15 @@
+{
+  "name": "cassandra-location-sink",
+  "config": {
+    "connector.class": "com.datastax.oss.kafka.sink.CassandraSinkConnector",
+    "tasks.max": "1",
+    "topics": "location",
+    "contactPoints": "localhost",
+    "loadBalancing.localDc": "datacenter1",
+    "port": "9042",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "topic.location.sales.geo.mapping": "id=value.id, latitude=value.latitude, longitude=value.longitude"
+  }
+}
