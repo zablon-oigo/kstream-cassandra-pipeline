@@ -1,19 +1,11 @@
 ![Java](https://img.shields.io/badge/Java-17+-orange?logo=java&logoColor=white)
-
 ![Maven](https://img.shields.io/badge/Maven-3.8+-C71A36?logo=apache-maven&logoColor=white)
-
 ![Kafka](https://img.shields.io/badge/Apache%20Kafka-4.0-black?logo=apache-kafka&logoColor=white)
-
 ![Kafka Streams](https://img.shields.io/badge/Kafka%20Streams-Real%20Time%20Processing-black?logo=apache-kafka&logoColor=white)
-
 ![Kafka Connect](https://img.shields.io/badge/Kafka%20Connect-Integration%20Layer-black?logo=apache-kafka&logoColor=white)
-
 ![Cassandra](https://img.shields.io/badge/Apache%20Cassandra-Distributed%20DB-1287B1?logo=apache-cassandra&logoColor=white)
-
 ![HTTPie](https://img.shields.io/badge/HTTPie-Modern%20HTTP%20Client-73DC8C?logo=httpie&logoColor=black)
-
 ![curl](https://img.shields.io/badge/curl-CLI-073551?logo=curl&logoColor=white)
-
 ![jq](https://img.shields.io/badge/jq-JSON%20Processor-5A5A5A)
 
 
