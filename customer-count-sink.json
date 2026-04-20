@@ -1,0 +1,17 @@
+{
+  "name": "customer-count-sink",
+  "config": {
+    "connector.class": "com.datastax.oss.kafka.sink.CassandraSinkConnector",
+    "tasks.max": "1",
+    "topics": "customer-count-by-country",
+    "contactPoints": "localhost",
+    "loadBalancing.localDc": "datacenter1",
+    "port": "9042",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter.schemas.enable": "false",
+
+    "topic.customer-count-by-country.sales.customer_counts_by_country.mapping": 
+      "id=now(), country=key, customer_count=value"
+  }
+}
